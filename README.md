@@ -9,6 +9,7 @@
 - [5. Considerações Técnicas](#5-considerações-técnicas)
 - [6. Critérios mínimos de aceitação do projeto](#6-critérios-mínimos-de-aceitação-do-projeto)
 - [7. Deploy](#7-deploy)
+- [8.Planejamento](#8-planejamento)
 - [9. Considerações para solicitar seu feedback do projeto](#9-considerações-para-solicitar-seu-feedback-do-projeto)
 - [10. Dicas, guias e leituras complementares](#10-dicas-guias-e-leituras-complementares)
 
