@@ -9,8 +9,9 @@
 - [5. Considerações Técnicas](#5-considerações-técnicas)
 - [6. Critérios mínimos de aceitação do projeto](#6-critérios-mínimos-de-aceitação-do-projeto)
 - [7. Deploy](#7-deploy)
-- [8. Considerações para solicitar seu feedback do projeto](#8-considerações-para-solicitar-seu-feedback-do-projeto)
-- [9. Dicas, guias e leituras complementares](#9-dicas-guias-e-leituras-complementares)
+- [8.Planejamento](#8-planejamento)
+- [9. Considerações para solicitar seu feedback do projeto](#9-considerações-para-solicitar-seu-feedback-do-projeto)
+- [10. Dicas, guias e leituras complementares](#10-dicas-guias-e-leituras-complementares)
 
 ---
 
@@ -636,15 +637,15 @@ Reflita e depois enumere os objetivos que quer alcançar e aplique no seu projet
 
 Este projeto deve ser resolvido individualmente.
 
-O prazo estimado para concluir o projeto é de 2 a 3 Sprints.
+O prazo estimado para concluir o projeto é de 3 a 4 Sprints.
 
-Os testes unitários devem cobrir no mínimo 90% de _statements_,
+Os testes unitários devem cobrir no mínimo 70% de _statements_,
 _functions_, _lines_ e _branches_.
 
-Além disso, você deve definir a estrutura de pastas e arquivos que
-considerar necessária. Você pode seguir as convenções do framework
-escolhido. Portanto, os testes e a configuração necessária para executá-los
-serão de sua responsabilidade.
+Para implementar este projeto, recomendamos usar o planejamento sugerido encontrado
+no repositório [movie-challenge-planner](https://github.com/laboratoria/movie-challenge-planner),
+que fornece um CLI para fazer fork do presente repositório e criar um GitHub Project com
+o _milestone_ e _issues_ de cada história de usuário.
 
 ## 5. Considerações Técnicas
 
@@ -668,10 +669,9 @@ Lembre-se de que, se escolher o Angular, é obrigatório usar o
 [TypeScript](https://www.typescriptlang.org/). O TypeScript é uma linguagem
 de programação fortemente tipada baseada em JavaScript.
 
-Se escolher o React, a decisão de usar o TypeScript é opcional
-(mas recomendada!). Aqui você pode encontrar mais informações sobre
-como iniciar seu projeto com
-[TypeScript e React](https://itnext.io/create-react-v18-typescript-project-with-vite-d0d602e4a60e).
+Se você estiver usando Angular ou React, é obrigatório usar
+[TypeScript](https://www.typescriptlang.org/). O TypeScript é uma
+linguagem de programação fortemente tipada baseada em JavaScript.
 
 A aplicação deve usar `npm-scripts` e deve incluir scripts `start`, `test`,
 `build` e `deploy` para iniciar, executar testes, empacotar e implantar a
@@ -696,64 +696,73 @@ o momento.
 
 ---
 
-#### [História do Usuário 1] Lista de Filmes
+#### [História técnica 1] Configuração do projeto
 
-Eu, como usuária, quero visualizar um catálogo de filmes em uma tabela
-(linhas e colunas).
+Ao iniciar um projeto, sempre há uma série de tarefas às quais devemos dedicar tempo.
 
-##### Critérios de aceitação
+##### Definição de pronto
 
-- Deve ser utilizado o _endpoint_
-[/discover/movie](https://developer.themoviedb.org/reference/discover-movie).
-- A aplicação deve incluir paginação para explorar o catálogo por páginas.
-- Cada filme deve exibir pelo menos: pôster, título original e ano de lançamento.
+- [ ] É possível executar o projeto e visualizar a aplicação padrão em nosso navegador.
 
-##### Definição de Pronto
+- [ ] É possível executar o linter e os testes unitários.
 
-- Os componentes desenvolvidos devem ter testes unitários.
+- [ ] Não é possível fazer um push direto para o branch principal.
 
----
+- [ ] Existe um Figma com os designs de alta fidelidade.
 
-#### [História do Usuário 2] Filtro e Ordenação
-
-Eu, como usuária, quero filtrar e ordenar o catálogo de filmes usando os
-critérios suportados pela _TheMovie Database API V3_.
-
-##### Critérios de Aceitação
-
-- Para filtrar, deve ser usado o _endpoint_
-[/discover/movie](https://developer.themoviedb.org/reference/discover-movie),
-e um ou mais de seus parâmetros, como, por exemplo, _with_genres_.
-- Para ordenar, deve ser usado o _endpoint_
-[/discover/movie](https://developer.themoviedb.org/reference/discover-movie),
-e um ou mais de seus parâmetros, como, por exemplo, _sort_by_.
-- A paginação deve manter o filtro e a ordenação.
-- Cada filme deve exibir pelo menos: pôster, título original e ano de lançamento.
-
-##### Definição de Pronto
-
-- Os componentes desenvolvidos devem ter testes unitários.
+- [ ] A aplicação está implantada corretamente e uma URL pública é fornecida.
 
 ---
 
-#### [História do Usuário 3] Detalhes de um Filme
+#### [História de usuário 2] Lista de filmes
 
-Eu, como usuária, quero consultar os detalhes de um filme.
+Como usuário, quero visualizar o catálogo de filmes em linhas e colunas.
 
-##### Critérios de Aceitação
+##### Definição de pronto
 
-- Deve ser usado o _endpoint_
-[/movie/{movie_id}](https://developer.themoviedb.org/reference/movie-details).
-- Para o filme, devem ser exibidos pelo menos: pôster, título original, ano
-de lançamento, gêneros, média de votação e total de votos.
-- A interface deve permitir retornar à lista de filmes, mantendo o filtro
-e a ordenação.
-
-##### Definição de Pronto
-
-- Os componentes desenvolvidos devem ter testes unitários.
+- [ ] Ao visitar a aplicação implantada, deve-se visualizar em uma tabela (linhas e colunas) o catálogo de filmes do [_The Movie Database API V3_](https://developer.themoviedb.org/docs).
 
 ---
+
+#### [História de usuário 3] Lista de filmes paginada
+
+Como usuário, quero navegar pelo catálogo de filmes dividido em páginas.
+
+##### Definição de pronto
+
+- [ ] Ao visitar nossa aplicação implantada, deve-se visualizar o catálogo de filmes e navegar entre páginas.
+
+---
+
+#### [História de usuário 4] Filtrar e ordenar
+
+Como usuário, quero poder filtrar os filmes por gênero e ordená-los por ano em ordem ascendente e descendente.
+
+##### Definição de pronto
+
+- [ ] O usuário deve poder filtrar o catálogo por gênero.
+
+- [ ] O usuário deve poder remover o filtro para ver filmes não filtrados.
+
+- [ ] O usuário deve poder ordenar o catálogo de forma ascendente por ano.
+
+- [ ] O usuário deve poder ordenar o catálogo de forma descendente por ano.
+
+- [ ] O usuário deve poder remover a ordenação para ver os filmes não ordenados.
+
+---
+
+#### [História de usuário 5] Detalhes do filme
+
+Como usuário, quero poder ver informações detalhadas sobre um filme, para poder tomar decisões informadas sobre assisti-lo ou não.
+
+##### Definição de pronto
+
+- [ ] Os usuários podem navegar até a página de detalhes do filme a partir da lista de filmes ou de qualquer seção relevante.
+
+- [ ] Os detalhes do filme são exibidos de forma proeminente, fornecendo informações completas sobre o filme selecionado.
+
+- [ ] Os usuários podem voltar facilmente para a página anterior.
 
 ## 7. Deploy
 
@@ -769,7 +778,18 @@ plataforma que permite fazer deploy da nossa aplicação web estática
 (HTML, CSS e JavaScript) e também permite fazer deploy de aplicativos
 da web que são executados no servidor (Node.js).
 
-## 8. Considerações para solicitar seu feedback do projeto
+## 8. Planejamento
+
+Para implementar este projeto, recomendamos usar o planejamento sugerido encontrado no repositório [movie-challenge-planner](https://github.com/laboratoria/movie-challenge-planner), que fornece um CLI que o ajudará a _forkar_ o presente repositório e criar um GitHub Project com o _milestone_ e _issues_ de cada [história de usuário](#6-critérios-mínimos-de-aceitação-do-projeto).
+
+O intervalo de tempo estimado para completar o projeto é de 3 a 4 Sprints. Sugerimos que você se organize da seguinte maneira:
+
+- Sprint 1: completar a [História técnica 1](####[História-técnica-1]-Configuração-do-projeto) e [História de usuário 2](####-[História-de-usuário-2]-Lista-de-filmes)
+- Sprint 2: completar a [História de usuário 3](####[História-de-usuário-3]-Lista-de-filmes-paginada) e iniciar a [História de usuário 4](####[historia-de-usuario-4]-filtrar-y-ordenar)
+- Sprint 3: completar a [História de usuário 4](####[História-de-usuário-4]-Filtrar-e-ordenar)
+- Sprint 4: completar a [História de usuário 5](####[História-de-usuário-5]-Detalhes-do-filme)
+
+## 9. Considerações para solicitar seu feedback do projeto
 
 Antes de agendar seu feedback do projeto com um coach, certifique-se de que seu projeto:
 
@@ -785,7 +805,7 @@ pessoais em seu painel de estudante.
 Se você não concluiu todos os itens acima, não consideramos que você está pronto
 para sua sessão de feedback do projeto.
 
-## 9. Dicas, guias e leituras complementares
+## 10. Dicas, guias e leituras complementares
 
 Junte-se ao canal do Slack
 [#project-movie-challenge-fw](https://claseslaboratoria.slack.com/archives/C04A0GS1WJX)
