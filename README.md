@@ -673,6 +673,11 @@ Se você estiver usando Angular ou React, é obrigatório usar
 [TypeScript](https://www.typescriptlang.org/). O TypeScript é uma
 linguagem de programação fortemente tipada baseada em JavaScript.
 
+Se você usa Angular, **recomendamos usar a versão 14**. Para isso, é necessário ter instalada a versão 12 do NodeJS. 
+Você pode encontrar um guia de instalação 
+[aqui](https://github.com/Laboratoria/frontend-technologies-simple-example/tree/main/angular-example)
+ou consultar com seus coaches.
+
 A aplicação deve usar `npm-scripts` e deve incluir scripts `start`, `test`,
 `build` e `deploy` para iniciar, executar testes, empacotar e implantar a
 aplicação, respectivamente.
