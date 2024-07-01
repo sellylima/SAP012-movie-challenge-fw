@@ -5,19 +5,19 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MovieCardComponent } from './layout/movie-card/movie-card.component';
-import { ApiService } from './shared/api.service';
+import { ApiService } from './shared/services/api.service';
+import { HomeComponent } from './layout/home/home.component';
+import { FooterComponent } from './layout/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    HomeComponent,
+    FooterComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    CommonModule
-  ],
+  imports: [BrowserModule, HttpClientModule, CommonModule],
   providers: [ApiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
