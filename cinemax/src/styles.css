@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+:root {
+    --primary-color: #3a5cd4;
+    --body-color: #1E1E2A;
+    --container-color: #2d2e37;
+    --houver-color: #3b62ea;
+    --yellow-classification: #f5c905dd;
+    --font-color: #ffffff
+}
+
+body { 
+background-color: var(--body-color); 
+color: var(--font-color);
+max-width: 1060px;
+margin: auto;
+width: 100%;
+}
+
+html::-webkit-scrollbar{
+    width: 0.5rem;
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--houver-color);
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+
+
