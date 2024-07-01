@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Movie } from 'src/app/models/Movie';
-import { ApiService } from 'src/app/shared/api.service';
+import { ApiService } from 'src/app/shared/services/api.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -9,7 +9,7 @@ import { ApiService } from 'src/app/shared/api.service';
   styleUrls: ['./movie-card.component.css'],
 })
 export class MovieCardComponent implements OnInit {
-  movie: Movie[] = []; 
+  movie: Movie[] = [];
 
   constructor(private apiService: ApiService) {}
   ngOnInit(): void {}
