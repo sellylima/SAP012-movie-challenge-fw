@@ -1,1 +1,18 @@
-<p>movie-detail works!</p>
+<div *ngIf="loading" class="loading-indicator"></div>
+<div *ngIf="error">{{ error }}</div>
+
+<section *ngIf="movie" class="detail-content">
+  <div class="banner-img" *ngIf="movie.poster_path">
+    <img [src]="movie.poster_path" alt="Poster" class="card-image">
+  </div>
+  <!-- <div class="w-1/2 mobile">
+  </div> -->
+  <div class="text-content">
+    <h2 class="text-5xl text-white">{{ movie.title }}</h2>
+    <p class="text-white p-overview">{{ movie.overview }}</p>
+    <span class="text-white">{{ movie.release_year }}</span>
+  </div>
+    <button (click)="goBack()" class="button">
+      <i class='bx bxs-chevrons-left' ></i> Voltar
+    </button>
+  </section>
