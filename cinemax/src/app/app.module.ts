@@ -8,6 +8,7 @@ import { MovieCardComponent } from './layout/movie-card/movie-card.component';
 import { ApiService } from './shared/services/api.service';
 import { HomeComponent } from './layout/home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,12 @@ import { FooterComponent } from './layout/footer/footer.component';
     HomeComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, CommonModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    CommonModule,
+  ],
   providers: [ApiService],
   bootstrap: [AppComponent],
 })
