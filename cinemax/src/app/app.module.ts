@@ -9,6 +9,7 @@ import { ApiService } from './shared/services/api.service';
 import { HomeComponent } from './layout/home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderComponent } from './layout/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AppRoutingModule } from './app-routing.module';
     MovieCardComponent,
     HomeComponent,
     FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
