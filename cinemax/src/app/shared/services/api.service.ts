@@ -14,6 +14,24 @@ export class ApiService {
   apiUrl = 'https://api.themoviedb.org/3';
   genres: Genre[] = [];
 
+  getMovieDetail(id: number): Observable<Movie> {
+    // metodo getMovieDetail ok
+    return this.getMovieGenres().pipe(
+      switchMap(genresArray => {
+        const genresMap = formatGenresToMap(genresArray);
+
+        const url = `https://api.themoviedb.org/3/movie/${id}`;
+        const headers = {
+          'Authorization': `Bearer ${environment.TOKEN_API}`,
+        };
+
+        return this.http.get<any>(url, { headers }).pipe(
+          map(apiMovieData => formatMovie(apiMovieData, genresMap))
+        );
+      })
+    );
+  }
+
   constructor(private http: HttpClient) {}
 
   getMovies(): Observable<Movie[]> {

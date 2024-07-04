@@ -10,6 +10,7 @@ import { ApiService } from './shared/services/api.service';
 import { HomeComponent } from './layout/home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
+import { MovieDetailComponent } from './layout/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { HeaderComponent } from './layout/header/header.component';
     HomeComponent,
     FooterComponent,
     HeaderComponent,
+    MovieDetailComponent,
   ],
   imports: [
     BrowserModule,
