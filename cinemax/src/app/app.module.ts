@@ -11,6 +11,7 @@ import { HomeComponent } from './layout/home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { MovieDetailComponent } from './layout/movie-detail/movie-detail.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MovieDetailComponent } from './layout/movie-detail/movie-detail.compone
     FooterComponent,
     HeaderComponent,
     MovieDetailComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

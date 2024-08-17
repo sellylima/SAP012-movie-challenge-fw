@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "Live Preview",
+			"workspacePath": "c:\\Users\\vanes\\Laboratoria\\Projeto-5\\SAP012-movie-challenge-fw",
+			"problemMatcher": [],
+			"label": "Live Preview: Run Server"
+		}
+	]
+}

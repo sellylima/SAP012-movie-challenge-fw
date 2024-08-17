@@ -12,6 +12,7 @@ import { Genre } from '../../models/Genre';
 })
 export class ApiService {
   apiUrl = 'https://api.themoviedb.org/3';
+  apiKey = "8bc3fb0ad8bb41cbba3324db29c67c02"
   genres: Genre[] = [];
 
   getMovieDetail(id: number): Observable<Movie> {
@@ -64,4 +65,6 @@ export class ApiService {
       .get<{ genres: Genre[] }>(url, { headers })
       .pipe(map((response) => response.genres));
   }
+
+
 }
