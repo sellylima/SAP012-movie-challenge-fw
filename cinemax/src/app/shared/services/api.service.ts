@@ -66,5 +66,14 @@ export class ApiService {
       .pipe(map((response) => response.genres));
   }
 
+  bannerApiData(): Observable<any> {
+    const headers = new HttpHeaders().set(
+      'Authorization',
+      `Bearer ${environment.TOKEN_API}` 
+    );
+
+    return this.http.get(`${this.apiUrl}/trending/all/week`, { headers });
+  }
+
 
 }
