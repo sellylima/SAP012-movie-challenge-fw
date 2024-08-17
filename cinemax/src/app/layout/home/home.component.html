@@ -1,4 +1,4 @@
-<div class="film-box-container">
+<div class="film-box-container mx-4">
     <div class="film-box" *ngFor="let movie of movies" (click)="verDetalhes(movie.id)">
         <img class="card-image" [src]="movie.poster_path" alt="{{ movie.title }}">
         <div class="box-title">
