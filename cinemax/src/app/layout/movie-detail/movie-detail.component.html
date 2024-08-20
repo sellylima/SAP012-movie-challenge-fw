@@ -1,13 +1,14 @@
-<div *ngIf="loading" class="loading-indicator"></div>
+
+<!-- <div *ngIf="loading" class="loading-indicator"></div>
 <div *ngIf="error">{{ error }}</div>
 
-<section *ngIf="movie" class="detail-content">
+<section class="row" *ngIf="movie" class="detail-content">
   <div class="banner-img" *ngIf="movie.poster_path">
     <img [src]="movie.poster_path" alt="Poster" class="card-image">
-  </div>
+  </div> -->
   <!-- <div class="w-1/2 mobile">
   </div> -->
-  <div class="text-content">
+  <!-- <div class="text-content">
     <h2 class="text-5xl text-white">{{ movie.title }}</h2>
     <p class="text-white p-overview">{{ movie.overview }}</p>
     <span class="text-white">{{ movie.release_year }}</span>
@@ -15,4 +16,23 @@
     <button (click)="goBack()" class="button">
       <i class='bx bxs-chevrons-left' ></i> Voltar
     </button>
-  </section>
+  </section> -->
+
+  
+  <div class="container mt-5">
+    <div class="row p-5" *ngIf="movie">
+      <div class="col-lg-2" *ngIf="movie.poster_path">
+        <img [src]="movie.poster_path" alt="Poster" class="card-image">
+      </div>
+      <div class="col-lg-10 p-3">
+        <h1 class="mt-2 mb-2">{{ movie.title }}</h1>
+        <p class="text-white p-overview pe-5">{{ movie.overview }}</p>
+        <button (click)="goBack()" class="button">
+          <i class='bx bxs-chevrons-left' ></i> Voltar
+        </button>
+      </div>
+    </div>
+    
+  </div>
+  
+

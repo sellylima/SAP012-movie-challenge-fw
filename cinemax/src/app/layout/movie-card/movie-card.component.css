@@ -21,7 +21,6 @@
   }
   
   .film-box:hover .card-image {
-
     transform: scale(1.08);
   }
   

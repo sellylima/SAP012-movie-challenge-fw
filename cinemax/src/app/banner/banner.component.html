@@ -1,9 +1,9 @@
-<div class="contain-fluid pb-3" >
-
-    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+<div class="contain-fluid pb-4 px-5" >
+ 
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active" data-bs-interval="10000" *ngFor="let b of bannerResult; let i=index" [ngClass]="{active:i===1}">
-            <img src="https://image.tmdb.org/t/p/original/{{b.backdrop_path}}" class="d-block w-100" alt="Banner">
+            <img src="https://image.tmdb.org/t/p/original/{{b.backdrop_path}}" class="d-block w-100 rounded-1" alt="Banner">
             <div class="carousel-caption d-none d-md-block">
               <h2>{{b.original_title}}</h2>
               <p>{{b.overview}}</p>
