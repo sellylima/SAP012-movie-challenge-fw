@@ -25,7 +25,7 @@
 body { 
 background-color: var(--body-color); 
 color: var(--font-color);
-margin: auto;
+/* margin: auto; */
 width: 100%;
 }
 
@@ -38,8 +38,8 @@ html::-webkit-scrollbar-thumb{
     background: var(--houver-color);
 }
 
-section {
+/* section {
     padding: 3rem 0 2rem;
-}
+} */
 
 

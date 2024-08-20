@@ -1,6 +1,6 @@
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg fixed-top" [ngStyle]="navbg">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><h1 class="m-0"><img class="d-block pt-2"  src="../../assets/logo-selly-cine.png " alt="Logo do site Meteora"></h1></a>
+    <a class="navbar-brand" href="#"><h1 class="m-0"><img class="d-block  px-5"  src="../../assets/logo-selly-cine.png " alt="Logo do site Meteora"></h1></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,9 +9,9 @@
     <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
       </ul>
-      <form class="d-flex" role="search">
+      <form class="d-flex px-5" role="search">
         <input class="form-control me-2" type="search" placeholder="Digite o nome do filme" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Buscar</button>
+        <button class="btn btn-outline-light" type="submit">Buscar</button>
       </form>
     </div>
   </div>
