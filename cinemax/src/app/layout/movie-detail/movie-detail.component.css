@@ -2,38 +2,14 @@
 img{
   width: 100%;
   height: auto;
+  border-radius: 10px;
 }
 
-/* .detail-content{
-    padding: 0;
-     
-  }
-
-
-  /* .card-image { */
-   /* width: 50%; */
-    /* height: 100%;
-    object-fit: cover;
-    border-radius: 3px;
-    opacity: 80%;
-    box-shadow: 0 4px 7px rgba( 0, 0, 0, 0.25);
-  } */
-  /* .text-content{
-    width: 100%;
-  } */
   h1 {
     color:#ffff;
     font-weight: bold;
   } 
   
-  /* .bx bxs-chevrons-left {
-    width: 30px;
-    height: 30px;
-    /* padding: 5px; */
-    /* border-radius: 50%;
-    margin-right: 10px;
-    color:#FFFF;
-  } */ 
   
   span {
     font-size: 16px;
