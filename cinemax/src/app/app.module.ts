@@ -11,8 +11,8 @@ import { HomeComponent } from './layout/home/home.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { MovieDetailComponent } from './layout/movie-detail/movie-detail.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { BannerComponent } from './banner/banner.component';
+import { NavbarComponent } from './layout/navbar/navbar.component';
+import { BannerComponent } from './layout/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +25,7 @@ import { BannerComponent } from './banner/banner.component';
     NavbarComponent,
     BannerComponent,
   ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    CommonModule,
-  ],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, CommonModule],
   providers: [ApiService],
   bootstrap: [AppComponent],
 })

@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../shared/services/api.service';
+import { ApiService } from '../../shared/services/api.service';
 
 @Component({
   selector: 'app-banner',
   templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.css']
+  styleUrls: ['./banner.component.css'],
 })
 export class BannerComponent implements OnInit {
-
   constructor(private apiService: ApiService) {}
 
-  bannerResult:any=[];
+  bannerResult: any = [];
 
   ngOnInit(): void {
     this.bannerData();
@@ -18,9 +17,9 @@ export class BannerComponent implements OnInit {
 
   //BANNER-DATA//
 
-  bannerData(){
-    this.apiService.bannerApiData().subscribe((result)=>{
-      console.log(result,'bannerresult#');
+  bannerData() {
+    this.apiService.bannerApiData().subscribe((result) => {
+      console.log(result, 'bannerresult#');
       this.bannerResult = result.results;
     });
   }
