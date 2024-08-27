@@ -19,3 +19,32 @@
     color:#ffff;
 }
 
+
+/* Estilo das setas */
+.carousel-control-prev,
+.carousel-control-next {
+  background: none; 
+  border: none; 
+  color:#ffff; 
+}
+
+/* Ajusta o tamanho dos ícones */
+.carousel-control-prev i,
+.carousel-control-next i {
+  font-size: 3.5rem; 
+}
+
+/* Adiciona um fundo transparente */
+.carousel-control-prev {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+}
