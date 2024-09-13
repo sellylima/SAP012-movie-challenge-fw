@@ -1,12 +1,18 @@
 .carousel-inner{
-    height: 700px;
+    /* height: 700px; */
 }
 
 .carousel-inner .carousel-item img{
-    height: 700px;
+    height: 45rem;
     object-fit: cover;
     object-position: top;
-    
+}
+
+.carousel-caption {
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  padding: 0 2rem;
 }
 
 .carousel-caption h2 {
@@ -23,15 +29,15 @@
 /* Estilo das setas */
 .carousel-control-prev,
 .carousel-control-next {
-  background: none; 
-  border: none; 
-  color:#ffff; 
+  background: none;
+  border: none;
+  color:#ffff;
 }
 
 /* Ajusta o tamanho dos ícones */
 .carousel-control-prev i,
 .carousel-control-next i {
-  font-size: 3.5rem; 
+  font-size: 3.5rem;
 }
 
 /* Adiciona um fundo transparente */
