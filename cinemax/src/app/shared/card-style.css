@@ -10,7 +10,7 @@
   height: 380px;
   overflow: hidden;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .card-image {
@@ -41,4 +41,8 @@
 .title-film {
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+h1 {
+  color:#fff;
 }
