@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { MovieDetailComponent } from './layout/movie-detail/movie-detail.component';
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { BannerComponent } from './layout/banner/banner.component';
+import { SearchComponent } from './layout/search/search.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +26,9 @@ import { BannerComponent } from './layout/banner/banner.component';
     MovieDetailComponent,
     NavbarComponent,
     BannerComponent,
+    SearchComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule, CommonModule],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, CommonModule, FormsModule],
   providers: [ApiService],
   bootstrap: [AppComponent],
 })

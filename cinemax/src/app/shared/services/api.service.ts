@@ -1,3 +1,4 @@
+
 import { Injectable } from '@angular/core';
 import { Observable, map, switchMap } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -14,6 +15,7 @@ export class ApiService {
   apiUrl = 'https://api.themoviedb.org/3';
   apiKey = "8bc3fb0ad8bb41cbba3324db29c67c02"
   genres: Genre[] = [];
+  params: any;
 
   getMovieDetail(id: number): Observable<Movie> {
     // metodo getMovieDetail ok
@@ -69,11 +71,29 @@ export class ApiService {
   bannerApiData(): Observable<any> {
     const headers = new HttpHeaders().set(
       'Authorization',
-      `Bearer ${environment.TOKEN_API}` 
+      `Bearer ${environment.TOKEN_API}`
     );
 
     return this.http.get(`${this.apiUrl}/trending/all/week`, { headers });
   }
 
+  searchMovie(texto: string): Observable<Movie[]> {
+    const url = `${this.apiUrl}/search/movie`;
+    const params = {
+      api_key: this.apiKey,  // Usando a chave da API no lugar do Bearer token
+      query: texto,
+      page: '1'
+    };
 
+    return this.getMovieGenres().pipe(
+      map(formatGenresToMap),  // Transforme o array de gêneros em um mapa
+      switchMap(genresMap =>
+        this.http.get<{ results: any[] }>(url, { params })
+          .pipe(
+            map(response => response.results.map(movie => formatMovie(movie, genresMap))) // Passe o mapa de gêneros
+          )
+      )
+    );
+
+}
 }

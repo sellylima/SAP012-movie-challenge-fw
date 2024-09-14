@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Movie } from 'src/app/models/Movie';
 import { ApiService } from 'src/app/shared/services/api.service';
@@ -8,8 +8,8 @@ import { ApiService } from 'src/app/shared/services/api.service';
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.css'],
 })
-export class MovieCardComponent implements OnInit {
-  movie: Movie[] = [];
+export class MovieCardComponent {
+   @Input()movie!: Movie;
 
   constructor(private apiService: ApiService) {}
   ngOnInit(): void {}

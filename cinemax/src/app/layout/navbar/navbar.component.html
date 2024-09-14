@@ -12,10 +12,18 @@
     <div class="collapse navbar-collapse ms-auto" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto">
       </ul>
+
       <form class="d-flex px-5" role="search">
-        <input class="form-control me-2" type="search" placeholder="Digite o nome do filme" aria-label="Search">
-        <button class="btn btn-outline-light" type="submit">Buscar</button>
+        <input class="form-control me-2"
+              #txtSearch
+              (keyup.enter)="searchMovie(txtSearch.value)"
+              type="search"
+              placeholder="Buscar filmes"
+              aria-label="Search"
+              >
+        <button (click)="searchMovie(txtSearch.value)" class="btn btn-outline-light" type="submit">Buscar</button>
       </form>
+
     </div>
   </div>
 </nav>

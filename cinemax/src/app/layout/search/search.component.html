@@ -1,0 +1,8 @@
+
+<h1 class="text-capitalize">Filmes: <small>{{texto}}</small></h1>
+<hr>
+<div class="film-box-container mx-5">
+  <div class="film-box" *ngFor="let movieItem of movie">
+    <app-movie-card [movie]="movieItem"></app-movie-card>
+  </div>
+</div>
